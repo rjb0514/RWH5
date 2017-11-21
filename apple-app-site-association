@@ -1,0 +1,16 @@
+{
+"applinks": {
+"apps": [],
+"details": [
+
+{
+"appID": "com.gomejr.myf2",
+"paths": ["*"]
+},
+{
+"appID": "com.gomejr.myfv2",
+"paths" : ["*"]
+},
+]
+}
+}
