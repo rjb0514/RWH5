@@ -1,61 +1,41 @@
 <!DOCTYPE html>
-<!-- saved from url=(0055)http://caibaojian.com/demo/2014/12/weixinTip_purjs.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>微信弹出遮罩</title>
-</head>
-<body>
-	<style type="text/css">
-	*{margin:0; padding:0;}
-	img{max-width: 100%; height: auto;}
-	.test{height: 600px; max-width: 600px; font-size: 40px;}
-	</style>
-	<div class="test">
-		这个就是你打开浏览器后看到的内容了。如果你是用微信打开的话，会弹出一个提示，要求你在浏览器中打开。打开之后你就可以看到这些内容改了。
-
-
-
-	</div>
-	<script type="text/javascript">
-		function is_weixin() {
-		    var ua = navigator.userAgent.toLowerCase();
-		    if (ua.match(/MicroMessenger/i) == "micromessenger") {
-		        return true;
-		    } else {
-		        return false;
-		    }
-		}
-		var isWeixin = is_weixin();
-		var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
-		console.log(winHeight);
-		function loadHtml(){
-			var div = document.createElement('div');
-			div.id = 'weixin-tip';
-			div.innerHTML = '<p><img src="live_weixin.png" alt="微信打开"/></p>';
-			document.body.appendChild(div);
-		}
-		
-		function loadStyleText(cssText) {
-	        var style = document.createElement('style');
-	        style.rel = 'stylesheet';
-	        style.type = 'text/css';
-	        try {
-	            style.appendChild(document.createTextNode(cssText));
-	        } catch (e) {
-	            style.styleSheet.cssText = cssText; //ie9以下
-	        }
-            var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
-            head.appendChild(style); 
-	    }
-	    var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
-		if(isWeixin){
-			loadHtml();
-			loadStyleText(cssText);
-		}else {
-			window.location.href=""
-			window.location.href="http://www.18fjp.com"
-		}
-	</script>
-
-</body></html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <title>Title</title>
+            
+            
+            <style>
+                
+                #header{
+                    
+                    background-color: red;
+                    color: yellow;
+                    text-align: center;
+                }
+            
+                </style>
+            
+            
+    </head>
+    <body  background="http://www.w3school.com.cn/clouds.gif">
+        
+        <div id="header">
+            <h1>茹建斌</h1>
+            
+        </div>
+        
+        
+        <div id="section">
+            <h2>下午好</h2>
+            
+        </div>
+        
+        
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495705629&di=c7cbf48f76f8db111082ede34c9196b6&imgtype=jpg&er=1&src=http%3A%2F%2Ftupian.enterdesk.com%2F2013%2Fmxy%2F11%2F5%2F1%2F4.jpg">
+            
+            
+            
+            
+    </body>
+</html>
